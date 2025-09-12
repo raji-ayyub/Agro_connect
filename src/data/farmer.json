@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Ajanlekoko",
+        "phone": "8948837847",
+        "location": "Ibadan",
+        "pin": "67UD",
+        "farm_size": "90",
+        "major_crop": "Maize"
+    },
+    {
+        "name": "Bolumole Koker",
+        "phone": "08099889893",
+        "location": "Abeokuta",
+        "pin": "57IR",
+        "farm_size": "200",
+        "major_crop": "Cassava"
+    },
+    {
+        "name": "Agbekorode Victor",
+        "phone": "090887436356",
+        "location": "Kogi",
+        "pin": "28XH",
+        "farm_size": "30",
+        "major_crop": "Yam, Cassava"
+    }
+]
