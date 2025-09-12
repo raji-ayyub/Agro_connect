@@ -1,7 +1,7 @@
 import json
-import user as User
+from .user import User
 import os
-class Farmer(User) :
+class Farmer(User):
     def __init__ (self,name,phone, location,farm_size,major_crop):
         #calling the parent class user with usertype as farmer
         super().__init__(name,phone,location,"farmer")
@@ -20,19 +20,19 @@ class Farmer(User) :
         # checking Inputs for validations
         if not self.name.strip():
             print("❌ Error: Name cannot be empty.")
-            return False
+            return True
         if not self.phone.isdigit():
             print("❌ Error: Phone number must contain only digits.")
-            return False
+            return True
         if not self.location.strip():
             print("❌ Error: Location cannot be empty.")
-            return False
+            return True
         if not self.farm_size or not str(self.farm_size).isdigit():
             print("❌ Error: Farm size must be a number.")
-            return False
+            return True
         if not self.major_crop.strip():
             print("❌ Error: Major crop cannot be empty.")
-            return False
+            return True
         file_path="data/farmer.json"
         # make sure file exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
@@ -46,7 +46,7 @@ class Farmer(User) :
                 # check if user with same phone number exist
                 if any(farmer.get("phone")== self.phone for farmer in data):
                     print(f"❌Error: Farmer with phone {self.phone} already exists.")
-                    return False
+                    return True
                 # get the farmer data in to dict
                 new_farmer={
                     "name": self.name.strip().title(),
@@ -64,10 +64,10 @@ class Farmer(User) :
                 file.truncate()
             print(f"✅ Farmer {self.name} registered successfully with PIN {self.pin}.")
             print("Please keep your PIN save.. Thank you👌")
-            return True
-        except json.JSONDecodeError:
-            print("❌Error: farmer.json contain invalid JSON")
-            return False
+            # return False
+        # except json.JSONDecodeError as e:
+        #     print(f"❌Error: farmer.json contain invalid JSON: {e}")
+        #     return True
         except Exception as e:
             print(f"❌Unexpected error: {e}")
-            return False
+            return True
