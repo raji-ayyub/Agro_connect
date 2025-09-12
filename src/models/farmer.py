@@ -36,9 +36,7 @@ class Farmer(User):
         file_path="data/farmer.json"
         # make sure file exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        if not os.path.exists(file_path):
-            with open(file_path, "w") as file:
-                json.dump([],file)
+        
         # 
         try:
             with open(file_path, "r+") as file:
@@ -65,9 +63,15 @@ class Farmer(User):
             print(f"✅ Farmer {self.name} registered successfully with PIN {self.pin}.")
             print("Please keep your PIN save.. Thank you👌")
             # return False
-        # except json.JSONDecodeError as e:
-        #     print(f"❌Error: farmer.json contain invalid JSON: {e}")
-        #     return True
+        except FileNotFoundError:
+            #create empty file if file doesn't exist
+            with open(file_path, "w") as file:
+                json.dump([],file)
+            #then do the Registration again
+            self.registration()
+        except json.JSONDecodeError as e:
+            print(f"❌Error: farmer.json contain invalid JSON: {e}")
+            return True
         except Exception as e:
             print(f"❌Unexpected error: {e}")
             return True
