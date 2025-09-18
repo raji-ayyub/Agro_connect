@@ -7,20 +7,28 @@ import os
 class UserService:
    
     @staticmethod
-    def login(phone, pin, type):
+    def login(phone, pin):
         farmers = load_farmer_data()
         buyers = load_buyer_data()
-        if type == "farmer":
-
-            for f in farmers:
-                if f["phone"] == phone and f["pin"] == pin and f["type"]:
-                    return f
-            return None
-        else:     
+        records = None
+        # if type == "farmer":
+        # first checking farmers records
+        for f in farmers:
+            if f["phone"] == phone and f["pin"] == pin:
+                # return f
+                records = f
+        if records == None:
+            # now check buyers record
             for f in buyers:
                 if f["phone"] == phone and f["pin"] == pin:
-                    return f
-            return None
+                    # return f
+                    records = f
+
+        if records == None:
+            print("No record found, check no. or pin")
+        else:
+            return records
+    
 
     @staticmethod
     def update_profile(phone, updates):
@@ -51,7 +59,7 @@ def save_farmer_data(data):
 
 
 # Loading Buyer data functions
-buyer_data = "data/Buyer.json"
+buyer_data = "data/buyer.json"
 
 def load_buyer_data():
     if not os.path.exists(buyer_data):

@@ -76,9 +76,12 @@ if choice==1:
 elif choice==2:
     phone = input("Phone: ")
     pin = input("PIN: ")
-    user = UserService.login(phone, pin, type)
+    user = UserService.login(phone, pin)
     if user:
-        print(f"Welcome {user['name']}!")
+        print(f"\n\n ")
+        print("__________________________________________")
+        print(f" ----- Welcome {user['name']}! ------ ")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         while True:
             print("\n1. View Profile\n2. Update Profile\n3. Logout")
             sub = input("Choose: ")
