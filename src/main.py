@@ -1,6 +1,8 @@
 from models.farmer import Farmer 
 from models.buyer import Buyer
 
+from models.user_services import UserService
+
 goback=False
 # while goback==True:
 print("__________________________________________")
@@ -72,7 +74,31 @@ if choice==1:
         # 
    
 elif choice==2:
-    print("no fuction yet!")
+    phone = input("Phone: ")
+    pin = input("PIN: ")
+    user = UserService.login(phone, pin, type)
+    if user:
+        print(f"Welcome {user['name']}!")
+        while True:
+            print("\n1. View Profile\n2. Update Profile\n3. Logout")
+            sub = input("Choose: ")
+            if sub == "1":
+                print(user)
+            elif sub == "2":
+                key = input("Field to update (name/location/farm_size/crops): ")
+                val = input("New value: ")
+                msg = UserService.update_profile(phone, {key: val})
+                print(msg)
+            else:
+                break
+
+    else:
+        print("Invalid login!")
+
+
+
+
+
 elif choice==3:
     print("no fuction yet!")
 

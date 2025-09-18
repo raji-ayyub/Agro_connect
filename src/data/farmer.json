@@ -22,5 +22,13 @@
         "pin": "28XH",
         "farm_size": "30",
         "major_crop": "Yam, Cassava"
+    },
+    {
+        "name": "Ajanlekoko",
+        "phone": "00493883948",
+        "location": "Ibadan",
+        "pin": "01AE",
+        "farm_size": "600",
+        "major_crop": "Yam"
     }
 ]
