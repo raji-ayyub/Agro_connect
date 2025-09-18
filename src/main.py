@@ -74,9 +74,17 @@ if choice==1:
         # 
    
 elif choice==2:
+    
+    print("1. Farmer")
+    print("2. Buyer")
+    usertype = input("Login as (1/2): ")
     phone = input("Phone: ")
     pin = input("PIN: ")
-    user = UserService.login(phone, pin)
+    if usertype == "1":
+        usertype = "farmer"
+    elif usertype == "2":
+        usertype = "buyer"
+    user = UserService.login(phone, pin, usertype)
     if user:
         print(f"\n\n ")
         print("__________________________________________")

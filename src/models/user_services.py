@@ -7,23 +7,22 @@ import os
 class UserService:
    
     @staticmethod
-    def login(phone, pin):
+    def login(phone, pin, usertype):
         farmers = load_farmer_data()
         buyers = load_buyer_data()
         records = None
-        # if type == "farmer":
-        # first checking farmers records
-        for f in farmers:
-            if f["phone"] == phone and f["pin"] == pin:
-                # return f
-                records = f
-        if records == None:
-            # now check buyers record
-            for f in buyers:
+        if usertype == "farmer":
+            # first checking farmers records
+            for f in farmers:
                 if f["phone"] == phone and f["pin"] == pin:
                     # return f
                     records = f
-
+        elif usertype == "buyer":
+            # now check buyers record
+            for f in buyers:
+                if f["phone"] == phone and f["pin"] == pin:
+                    records = f
+                    
         if records == None:
             print("No record found, check no. or pin")
         else:
