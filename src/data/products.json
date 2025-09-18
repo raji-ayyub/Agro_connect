@@ -1,0 +1,52 @@
+[
+    {
+        "id": "11PI",
+        "farmer_id": "08099889893",
+        "product_name": "Cucumber",
+        "unit_price": 1000.0,
+        "location": "Offa",
+        "quantity": 60,
+        "description": "Juicy cucumber, greenish",
+        "date_posted": "2025-09-18"
+    },
+    {
+        "id": "12PI",
+        "farmer_id": "08099889893",
+        "product_name": "Cocoa",
+        "unit_price": 1000.0,
+        "location": "Offa",
+        "quantity": 20,
+        "description": "Juicy Cocoa, brownish",
+        "date_posted": "2025-09-18"
+    },
+    {
+        "id": "23RF",
+        "farmer_id": "090887436356",
+        "product_name": "Banana",
+        "unit_price": 500.0,
+        "location": "Kogi",
+        "quantity": 40,
+        "description": "sweet banana",
+        "date_posted": "2025-09-18"
+    },
+    {
+        "id": "06TE",
+        "farmer_id": "090887436356",
+        "product_name": "Water Melo",
+        "unit_price": 600.0,
+        "location": "Kogi",
+        "quantity": 700,
+        "description": "watery, juicy water melon",
+        "date_posted": "2025-09-18"
+    },
+    {
+        "id": "81YX",
+        "farmer_id": "887373793",
+        "product_name": "Corn",
+        "unit_price": 300.0,
+        "location": "Oyo",
+        "quantity": 30,
+        "description": "sweet corn",
+        "date_posted": "2025-09-18"
+    }
+]

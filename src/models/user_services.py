@@ -29,17 +29,40 @@ class UserService:
             return records
     
 
+   # update profile
     @staticmethod
-    def update_profile(phone, updates):
-        farmers = load_farmer_data()
-        for f in farmers:
-            if f["phone"] == phone:
-                f.update(updates)
-                save_farmer_data(farmers)
-                return "Profile updated!"
-        return "Farmer not found!"
-    
+    def update_profile(phone, updates: dict, usertype: str):
+        """
+        Update user profile fields for farmer or buyer.
+        """
+        if usertype == "farmer":
+            file_path = "data/farmer.json"
+        elif usertype == "buyer":
+            file_path = "data/buyer.json"
+        else:
+            return "❌ Invalid user type."
 
+        try:
+            with open(file_path, "r+") as file:
+                data = json.load(file)
+                user = next((u for u in data if u.get("phone") == phone), None)
+                if not user:
+                    return "❌ User not found."
+
+                for key, value in updates.items():
+                    if key in user:
+                        user[key] = value
+
+                file.seek(0)
+                json.dump(data, file, indent=4)
+                file.truncate()
+                return "✅ Profile updated successfully."
+        except FileNotFoundError:
+            return "❌ User data file not found."
+        except json.JSONDecodeError:
+            return "❌ User data file is corrupted."
+
+   
 
 
 

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "product_name": "Yam",
+        "unit_price": 480,
+        "location": "Lagos"
+        
+    },
+    {
+        "id": 2,
+        "product_name": "Cocoa",
+        "unit_price": 650,
+        "location": "Abuja"
+    },
+    {
+        "id": 3,
+        "product_name": "Cassava",
+        "unit_price": 250,
+        "location": "Abeokuta"
+        
+    },
+    {
+        "id": 4,
+        "product_name": "Rice",
+        "unit_price": 520,
+        "location": "Ibadan"
+    }
+]

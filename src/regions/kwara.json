@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "product_name": "Yam",
+        "unit_price": 405,
+        "location": "Kwara"
+        
+    },
+    {
+        "id": 2,
+        "product_name": "Cocoa",
+        "unit_price": 605,
+        "location": "Kwara"
+    },
+    {
+        "id": 3,
+        "product_name": "Cassava",
+        "unit_price": 255,
+        "location": "Kwara"
+        
+    },
+    {
+        "id": 4,
+        "product_name": "Rice",
+        "unit_price": 505,
+        "location": "Kwara"
+    }
+]

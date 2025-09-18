@@ -18,7 +18,7 @@
     {
         "name": "Agbekorode Victor",
         "phone": "090887436356",
-        "location": "Kogi",
+        "location": "lagos",
         "pin": "28XH",
         "farm_size": "30",
         "major_crop": "Yam, Cassava"
@@ -29,6 +29,54 @@
         "location": "Ibadan",
         "pin": "01AE",
         "farm_size": "600",
+        "major_crop": "Yam"
+    },
+    {
+        "name": "Boladele",
+        "phone": "9884773837",
+        "location": "Ogun",
+        "pin": "93QA",
+        "farm_size": "5",
+        "major_crop": "Apple"
+    },
+    {
+        "name": "Shobowale",
+        "phone": "887373793",
+        "location": "Ilorin",
+        "pin": "28FQ",
+        "farm_size": "400",
+        "major_crop": "Yam"
+    },
+    {
+        "name": "Bolanle Onikerosine",
+        "phone": "8847738487",
+        "location": "Lagos",
+        "pin": "67LK",
+        "farm_size": "50",
+        "major_crop": "Cassava"
+    },
+    {
+        "name": "Mr Olaosebikan",
+        "phone": "8773847738",
+        "location": "Ekiti",
+        "pin": "92BE",
+        "farm_size": "70",
+        "major_crop": "Maize"
+    },
+    {
+        "name": "Asake Online",
+        "phone": "73837372847",
+        "location": "Ogun",
+        "pin": "92VQ",
+        "farm_size": "80",
+        "major_crop": "Maize"
+    },
+    {
+        "name": "Obasanjo",
+        "phone": "8377728474",
+        "location": "Ogun",
+        "pin": "41KW",
+        "farm_size": "800",
         "major_crop": "Yam"
     }
 ]
