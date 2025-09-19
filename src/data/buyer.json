@@ -12,5 +12,26 @@
         "location": "Dubai",
         "pin": "67ZO",
         "organisation_name": "Goldsmith"
+    },
+    {
+        "name": "Jasmine Janet",
+        "phone": "84773838484",
+        "location": "Ilorin",
+        "pin": "79ZF",
+        "organisation_name": "Olowo-Okere Multiventures"
+    },
+    {
+        "name": "Alinko Dangote",
+        "phone": "73882774",
+        "location": "Osun",
+        "pin": "45YD",
+        "organisation_name": "Dangote"
+    },
+    {
+        "name": "Wale Adenuga",
+        "phone": "8773847383",
+        "location": "Ogun",
+        "pin": "03GC",
+        "organisation_name": "Wap"
     }
 ]

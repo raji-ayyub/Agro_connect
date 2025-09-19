@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "product_name": "Yam",
+        "unit_price": 450,
+        "location": "Oyo"
+        
+    },
+    {
+        "id": 2,
+        "product_name": "Cocoa",
+        "unit_price": 600,
+        "location": "Oyo"
+    },
+    {
+        "id": 3,
+        "product_name": "Cassava",
+        "unit_price": 200,
+        "location": "Oyo"
+        
+    },
+    {
+        "id": 4,
+        "product_name": "Rice",
+        "unit_price": 500,
+        "location": "Oyo"
+    }
+]
